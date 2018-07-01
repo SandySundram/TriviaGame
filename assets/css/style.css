@@ -123,3 +123,14 @@ body{
     margin-top: 30px;
 
 }
+.imageResult{
+    width: 250px;
+    height: 250px;
+    border: 2px solid rgba(0, 0, 255, 0.795);
+    margin: auto;
+    margin-top: 20px;
+}
+img{
+    width: 250px;
+    height: 250px;
+}
