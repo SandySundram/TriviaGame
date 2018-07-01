@@ -1,24 +1,27 @@
 .startGame{
-    height: 37px;
-    width: 200px;
+    height: 73px;
+    width: 130px;
     background-color: rgb(109, 104, 104,0.8);
-    margin: auto;
     text-align: center;
-    padding-top: 8px;
+    padding-top: 43px;
     border-radius: 10px;
-    top: 400px;
+    top: 350px;
     position: absolute;
-    margin-left: 350px;
+    margin-left: 389px;
     font-size: 30px;
+    -webkit-transition: all 1s, -webkit-transform all 1s; /* Safari */
+    transition: all 1s;
 }
 .startGame:hover{
     border: 2px solid rgb(109, 104, 104);
     background-color: red;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    cursor: pointer;
 }
 #Top{
     height: 90px;
     width: auto;
-    /* background-color: blue; */
     font-size: 70px;
     color: white;
     text-align: center;
@@ -71,7 +74,6 @@ body{
     margin-top: 20px;
     margin-bottom: 10px;
     padding-top: 5px;
-    /* background-color: rgba(0, 0, 255, 0.795); */
     text-align: center;
     border-radius: 30px;
     font-size: 30px;
@@ -95,13 +97,13 @@ body{
     margin-top: 20px;
     margin-bottom: 10px;
     padding-top: 10px;
-    /* background-color: blue; */
     text-align: center;
     border-radius: 30px;
     font-size: 30px;
 }
 .answer:hover{
     background-color: rgba(255, 0, 0, 0.801);  
+    cursor: url("../images/soccer.png"),auto;
 }
 .messageResult{
     height: 58px;

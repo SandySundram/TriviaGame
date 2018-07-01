@@ -124,7 +124,7 @@ function startGame(){
         index = 0;
         time = 30;
         $('.resultPage').addClass('hide');
-        $(".startGame").css('top','550px').removeClass('hide')
+        $(".startGame").css('top','450px').removeClass('hide')
         $(".resultFinal").removeClass('hide');
     }    
 }
@@ -160,6 +160,11 @@ function questionResults(theResult){
 
 function incrementtime(){
     $('#timer').text(time);
+    $(".questionDiv").text(questionAnswers[index].question).removeClass('hide');
+    $(".answerOne").text(questionAnswers[index].choices.answerOne).removeClass('hide');
+    $(".answerTwo").text(questionAnswers[index].choices.answerTwo).removeClass('hide');
+    $(".answerThree").text(questionAnswers[index].choices.answerThree).removeClass('hide');
+    $(".answerFour").text(questionAnswers[index].choices.answerFour).removeClass('hide');
     $(".timerDiv").removeClass('hide');
     time--;
     if (time == -1){
@@ -173,14 +178,6 @@ function incrementtime(){
 function triviaQuestions(){
     $(".resultPage").addClass('hide');
     timer = setInterval(incrementtime,1000);
-    
-    
-    $(".questionDiv").text(questionAnswers[index].question).removeClass('hide');
-    $(".answerOne").text(questionAnswers[index].choices.answerOne).removeClass('hide');
-    $(".answerTwo").text(questionAnswers[index].choices.answerTwo).removeClass('hide');
-    $(".answerThree").text(questionAnswers[index].choices.answerThree).removeClass('hide');
-    $(".answerFour").text(questionAnswers[index].choices.answerFour).removeClass('hide');
-        
 }
 
 $(document).on('click','.answer',function(){
