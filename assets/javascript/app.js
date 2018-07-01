@@ -112,7 +112,7 @@ function startGame(){
     $(".startGame").addClass('hide');
     $(".resultFinal").addClass('hide');
     if(index < questionAnswers.length){
-        triviaQuestions();
+        timer = setInterval(incrementtime,1000);
     }
     else{
         $(".correctResult").text('Correct Answers: '+correctAnswerCount);
@@ -159,6 +159,7 @@ function questionResults(theResult){
 
 
 function incrementtime(){
+    $(".resultPage").addClass('hide');
     $('#timer').text(time);
     $(".questionDiv").text(questionAnswers[index].question).removeClass('hide');
     $(".answerOne").text(questionAnswers[index].choices.answerOne).removeClass('hide');
@@ -174,10 +175,6 @@ function incrementtime(){
         questionResults(-1);
 
     }
-}
-function triviaQuestions(){
-    $(".resultPage").addClass('hide');
-    timer = setInterval(incrementtime,1000);
 }
 
 $(document).on('click','.answer',function(){
